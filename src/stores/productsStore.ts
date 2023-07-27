@@ -36,7 +36,7 @@ export const useProductsStore = defineStore('products', () => {
       }
       if (searchFiltersStore.discount) {
         productsList.value = productsList.value.filter(
-          (product) => product.discountPercentage >= searchFiltersStore.discount
+          (product) => product.discountPercentage >= searchFiltersStore.discount!
         )
       }
       productsList.value = productsList.value.filter(
